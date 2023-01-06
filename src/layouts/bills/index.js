@@ -39,13 +39,14 @@ function Bills() {
   const [phone,setPhone] = useState("");
   
   useEffect( ()=> {
-    const getData = async(status) => {
-      const response = await fetch('http://127.0.0.1:8000/api/bills?status='+status+'&phone='+phone);
-      const billsResult = await response.json();
-      setBill(billsResult.data);
-    }
-    void getData(status)
+    getData(status)
   },[])
+
+  const getData = async(status) => {
+    const response = await fetch('http://127.0.0.1:8000/api/bills?status='+status+'&phone='+phone);
+    const billsResult = await response.json();
+    setBill(billsResult.data);
+  }
 
   const handleKeyChange = (event) => {
     setPhone(event.target.value);
