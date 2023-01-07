@@ -57,7 +57,7 @@ function BillingInformation() {
             car={car}
             licensePlate={car.licensePlate}
             paymentType={bill.paymentMethod=="Cash"? "Tiền mặt": "online"}
-            pStatus = {bill.paymentStatus=="paid"? "Đã thanh toán": "Chưa thanh toán"}
+            pStatus = {bill.paymentStatus == "paid"? "Đã thanh toán": "Chưa thanh toán"}
             cfStatus={bill.confirmStatus=="confirm"? "Đã duyệt": "Chưa duyệt"}
             startDate={bill.startDate}
             endDate={bill.endDate}

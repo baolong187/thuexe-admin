@@ -72,7 +72,7 @@ export default function data(bills) {
           </NavLink>
         )
     }
-    if(item.paymentStatus == 'pending') {
+    if(item.paymentStatus == 'unpaid') {
       bills.paymentStatus = (
         <MDBox ml={-1}>
           <MDBadge badgeContent="chưa thanh toán" color="dark" variant="gradient" size="sm" />
