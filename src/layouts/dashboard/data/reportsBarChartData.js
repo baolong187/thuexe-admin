@@ -18,8 +18,6 @@ export default function data() {
     let data = item.total_pirce
     return data
   });
-  console.log(datas);
-
   return {
     labels: labels,
     datasets: { label: "Doanh thu", data: datas },

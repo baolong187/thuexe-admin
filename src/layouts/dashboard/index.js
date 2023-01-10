@@ -21,7 +21,7 @@ import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import { useState, useEffect } from "react";
 
 function Dashboard() {
-  const { sales, tasks } = reportsLineChartData;
+  // const { sales, tasks } = reportsLineChartData;
   const [summary, setSummary] = useState([]);
   useEffect(async ()=> {
     let summaryResult = await fetch('http://127.0.0.1:8000/api/statistical/summary');
@@ -92,14 +92,10 @@ function Dashboard() {
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="success"
-                  title="daily sales"
-                  description={
-                    <>
-                      (<strong>+15%</strong>) increase in today sales.
-                    </>
-                  }
-                  date="updated 4 min ago"
-                  chart={sales}
+                  title="Doanh thu theo tháng"
+                  description="Doanh thu theo tháng"
+                  date=""
+                  chart={reportsLineChartData()}
                 />
               </MDBox>
             </Grid>

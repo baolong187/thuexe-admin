@@ -34,7 +34,7 @@ import MDTypography from "components/MDTypography";
 import configs from "examples/Charts/LineCharts/ReportsLineChart/configs";
 
 function ReportsLineChart({ color, title, description, date, chart }) {
-  const { data, options } = configs(chart.labels || [], chart.datasets || {});
+  const { data, options } = configs(chart.sales.labels || [], chart.sales.datasets || {});
 
   return (
     <Card sx={{ height: "100%" }}>
